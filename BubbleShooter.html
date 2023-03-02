@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+		
+	<head>
+		<title> Bubble Shooter </title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Page Background -->
+		
+		<style>
+			body {
+				background-image: url('Media/BubbleShooterBackground.jpg');
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+		
+	<body>
+		
+		<!-- Header -->
+		
+		<div class="bsheader"> Bubble Shooter </div>
+		
+		<!-- Subhead -->
+		
+		<div class="bssubhead"> Puzzle Bobble? </div>
+		
+		<!-- Paragraph -->
+		
+		<div class="bspara"> Taito Corporation of Tokyo, Japan is credited with having created the first "bubble shooter" game, releasing it under the name "Puzzle Bobble" in 1994. "Puzzle Bobble" was based on a game they had previously made called "Bubble Bobble," although it did not share the same format as the Bubble Shooter we all know today. It was in 2002 that the term "Bubble Shooter" was coined by Absolutist LTD, whose game featured the super-saturated colors associated with the genre as a whole. Although my first experience was on a flip phone, the game was transferred onto smartphones in 2010.  </div>
+		
+		<!-- IPhone Navigation -->
+		
+		<img src="Media/HandHoldingPhoneBS.png" class="bsphonenavigation" alt="A graphic of an iPod Touch being held by the late Steve Jobs filled with the colourful gradation that is typical of most Bubble Shooter video games.">
+
+		<!-- Buttons to Different Pages -->
+		
+		<a href="index.html" onClick="index.html">
+		<img src="Media/HomepageIcon.png" class="bshpbutton" type="button" alt=>
+		</a>
+		
+		<a href="TempleRun.html" onClick="TempleRun.html">
+		<img src="Media/TempleRunIcon.png" class="bstrbutton" alt=>
+		</a>
+		
+		<img src="Media/InProgressIcon.png" class="bsnabutton" alt=>
+		
+		<img src="Media/InProgressIcon.png" class="bsnabutton2" alt=>
+		
+		<a href="hpanimatedbg.html" onClick="hpanimatedbg.html">
+		<img src="Media/AppleIconAnim.png" class="bshpabutton" alt=>
+		</a>
+		
+		<!-- Bubble Shooter Cursor -->
+		<div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		 <div class="circle2"></div>
+		</div>
+
+	</body>
+
+	<!-- Bubble Shooter Cursor Script -->
+		
+	<script> 
+
+	const coords = { x: 0, y: 0 };
+	const circles = document.querySelectorAll(".circle2");
+
+	const colors = [
+	  "#9696ff",
+	  "#96b6ff",
+	  "#96ddff",
+	  "#96eeff",
+	  "#96ffff",
+	  "#b0e5e5",
+	  "#d0c5c5",
+	  "#eca9a9",
+	  "#ff9696",
+	  "#ff96bb",
+	  "#ff96cd",
+	  "#ff96e1",
+	  "#ff96ff",
+	  "#e0b6e0",
+	  "#bdd8bd",
+	  "#b1e4b1",
+	  "#96ff96",
+	  "#a6ff96",
+	  "#beff96",
+	  "#dfff96",
+	  "#ffff96",
+	  "#ffffff"
+	  
+	];
+
+	circles.forEach(function (circle, index) {
+	  circle.x = 0;
+	  circle.y = 0;
+	  circle.style.backgroundColor = colors[index % colors.length];
+	});
+
+	window.addEventListener("mousemove", function(e){
+	  coords.x = e.clientX;
+	  coords.y = e.clientY;
+
+	});
+
+	function animateCircles() {
+
+	  let x = coords.x;
+	  let y = coords.y;
+
+	  circles.forEach(function (circle, index) {
+		circle.style.left = x - 12 + "px";
+		circle.style.top = y - 12 + "px";
+
+		circle.style.scale = (circles.length - index) / circles.length;
+
+		circle.x = x;
+		circle.y = y;
+
+		const nextCircle = circles[index + 1] || circles[0];
+		x += (nextCircle.x - x) * 0.3;
+		y += (nextCircle.y - y) * 0.3;
+	  });
+
+	  requestAnimationFrame(animateCircles);
+	}
+
+	animateCircles();
+
+	</script>
+
+</html>

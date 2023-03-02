@@ -1,0 +1,358 @@
+@charset "utf-8";
+
+/* Homepage */
+
+.hpheader {
+	width: 1000px;
+    height: 100px;
+    background-color: red;
+    font-family: 'LoRes 12 OT';
+	font-weight: bold;
+    font-size: 60px;
+    color: black;
+    position: relative;
+    top: 20px;
+    margin: auto;
+    text-align: center;
+    padding-top: 25px;
+    border-radius: 16px;
+	border: 3px solid black;
+}
+
+.hpsubhead {
+	width: 400px;
+	height: 480px;
+	background-color: red;
+	font-family: 'LoRes 12 OT';
+	font-weight: bold;
+	font-size: 40px;
+	color: black;
+	position: relative;
+	top: 60px;
+	left: -250px;
+	margin: auto;
+	text-align: center;
+	padding-top: 25px;
+	border-radius: 16px;
+	border: 3px solid black;
+}
+
+.hppara {
+	width: 335px;
+	height: 400px;
+	background-color: red;
+	font-family: 'LoRes 12 OT';
+	font-size: 20px;
+	color: black;
+	position: relative;
+	top: -360px;
+	left: -250px;
+	margin: auto;
+	text-align: left;
+	
+}
+
+.hpphonenavigation {
+	position: relative;
+	left: 960px;
+	top: -850px;
+}
+
+.hpbsbutton {
+	position: relative;
+	top: -1950px;
+	left: 350px;
+}
+
+.hpbsbutton:hover {
+	transition-duration: 0.5s;
+	border: 3px solid red;
+	border-radius: 8px;
+	background-color: red;
+	color: red;
+}
+
+.hptrbutton {
+	position: relative;
+	top: -1950px;
+	left: 360px;
+}
+
+.hptrbutton:hover {
+	transition-duration: 0.5s;
+	border: 3px solid red;
+	border-radius: 8px;
+	background-color: red;
+	color: red;
+}
+
+.hpnabutton {
+	position: relative;
+	top: -1950px;
+	left: 370px;
+}
+
+.hpnabutton2 {
+	position: relative;
+	top: -1950px;
+	left: 380px;
+}
+
+.hpstevejobsbutton {
+	width: 400px;
+	height: 150px;
+	position: relative;
+	top: -1600px;
+	left: 500px;
+	padding-top: 50px;
+	font-family: "LoRes 12 OT";
+	font-weight: bold;
+	font-size: 40px;
+	background-color: red;
+	border-radius: 16px;
+	text-align: center;
+	border: 3px solid black;
+}
+
+.hpstevejobsbutton:hover {
+	transition-duration: 1s;
+	background-color: white;
+    color: red;
+	border: 3px solid red;
+}
+
+.hpstevejobsbutton:link {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.hpstevejobsbutton:active {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.hpstevejobsbutton:visited {
+  color: red;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* Bubble Shooter */
+
+.bsheader {
+	width: 700px;
+    height: 100px;
+    background: rgb(150,150,255);
+    background: linear-gradient(90deg, rgba(150,150,255,1) 0%, rgba(150,255,255,1) 20%, rgba(255,150,150,1) 40%, rgba(255,150,255,1) 60%, rgba(150,255,150,1) 80%, rgba(255,255,150,1) 100%);
+	font-family: 'LoRes 12 OT';
+	font-weight: bold;
+    font-size: 60px;
+    color: black;
+    position: relative;
+    top: 20px;
+    margin: auto;
+    text-align: center;
+    padding-top: 25px;
+    border-radius: 16px;
+	border: 3px solid black;
+}
+
+.bssubhead {
+	width: 400px;
+	height: 520px;
+	background: rgb(150,150,255);
+    background: linear-gradient(90deg, rgba(150,150,255,1) 0%, rgba(150,255,255,1) 20%, rgba(255,150,150,1) 40%, rgba(255,150,255,1) 60%, rgba(150,255,150,1) 80%, rgba(255,255,150,1) 100%);
+	font-family: 'LoRes 12 OT';
+	font-weight: bold;
+	font-size: 40px;
+	color: black;
+	position: relative;
+	top: 60px;
+	left: -280px;
+	margin: auto;
+	text-align: center;
+	padding-top: 25px;
+	border-radius: 16px;
+	border: 3px solid black;
+	
+}
+
+.bspara {
+	width: 335px;
+	height: 400px;
+	background-color: transparent;
+	font-family: 'LoRes 12 OT';
+	font-size: 20px;
+	color: black;
+	position: relative;
+	top: -400px;
+	left: -280px;
+	margin: auto;
+	text-align: left;
+
+}
+
+.bsphonenavigation {
+	position: relative;
+	left: 960px;
+	top: -890px;
+}
+
+.bshpbutton {
+	position: relative;
+	top: -1990px;
+	left: 350px;
+}
+
+.bshpbutton:hover {
+	transition-duration: 0.5s;
+	border: 3px solid red;
+	border-radius: 8px;
+	background-color: red;
+	color: red;
+}
+
+.bstrbutton {
+	position: relative;
+	top: -1990px;
+	left: 360px;
+}
+
+.bstrbutton:hover {
+	transition-duration: 0.5s;
+	border: 3px solid red;
+	border-radius: 8px;
+	background-color: red;
+	color: red;
+}
+
+.bsnabutton {
+	position: relative;
+	top: -1990px;
+	left: 370px;
+}
+
+.bsnabutton2 {
+	position: relative;
+	top: -1990px;
+	left: 380px;
+}
+
+.bshpabutton {
+	position: relative;
+	top: -1980px;
+	left: 360px;
+}
+
+.bshpabutton {
+	transition-duration: 0.5s;
+	border: 3px solid red;
+	border-radius: 8px;
+	background-color: red;
+	color: red;
+}
+
+
+/* Fruit Ninja */
+
+.fnheader {
+    width: 400px;
+    height: 100px;
+    background-color: black;
+    font-family: 'LoRes 12 OT';
+	font-weight: bold;
+    font-size: 60px;
+    color: white;
+    position: relative;
+    top: 20px;
+    margin: auto;
+    text-align: center;
+    padding-top: 25px;
+    border-radius: 16px;	
+}
+
+.fnsubhead {
+	
+}
+
+.fnpara {
+	
+}
+
+/* Temple Run */
+
+.trheader {
+	width: 600px;
+    height: 100px;
+    background-color: black;
+    font-family: 'LoRes 12 OT';
+	font-weight: bold;
+    font-size: 60px;
+    color: #fccc13;
+    position: relative;
+    top: 20px;
+    margin: auto;
+    text-align: center;
+    padding-top: 25px;
+    border-radius: 16px;
+}
+
+.trsubhead {
+	
+}
+
+.trpara {
+	
+}
+
+/* Cursors and Games */
+
+.circle {
+  height: 24px;
+  width: 24px;
+  translate: rotate(45deg);
+  background-color: black;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999;
+}
+
+.circle2 {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: black;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999;
+}
+
+.circle3 {
+  height: 24px;
+  width: 24px;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-bottom: 25px solid #555;
+}
+
+.circle4 {
+  height: 25px;
+  width: 25px;
+  position: fixed; 
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  z-index: 99999999;
+   background-image: url("Media/AppleCursor.png");
+}

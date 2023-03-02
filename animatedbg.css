@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+/* Animated Background */
+
+body {
+	min-height: 100vh;
+	background: black;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.bubbles {
+	position: relative;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.bubbles span {
+	position: relative;
+	width: 25px !important;
+	height: 25px !important;
+	margin: 0 16px;
+	background-image: url("Media/AppleCursor.png");
+	background-color: transparent;
+	animation: animate 15s linear infinite;
+	animation-duration: calc(125s / var(--i));
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@keyframes animate {
+	0% {transform:translateY(100vh) scale(1)}
+	50% {transform: translateY(50vh) scale(2)}
+	100% {transform: translateY(-10vh) scale(1)}
+}
+
+/* Page Elements */
+
+.hpheader {
+	width: 750px;
+    height: 85px;
+    background-color: white;
+    font-family: 'LoRes 12 OT';
+	font-weight: bold;
+    font-size: 40px;
+    color: black;
+    position: relative;
+	bottom: 95vh;
+    margin: auto;
+    text-align: center;
+	padding: 15px;
+    border-radius: 16px;
+	border: 4px solid red;
+	box-sizing: border-box;
+}
+
+.hpbox1 {
+	width: 300px;
+	height: 380px;
+	background-color: white;
+	color: black;
+	position: relative;
+	bottom: 92.5vh;
+	right: 40vh;
+	margin: auto;
+	padding: 15px;
+	border-radius: 16px;
+	border: 2px solid red;
+	box-sizing: border-box;
+}
+
+.hpsubhead {
+	width: 265px;
+	height: 40px;
+	text-align: center;
+	font-size: 30px;
+	font-family: 'LoRes 12 OT';
+	display: block;
+	
+}
+
+.hppara {
+	width: 265px;
+	height: 275px;
+	text-align: left;
+	font-size: 16px;
+	font-family: 'LoRes 12 OT';
+	display: block;
+}
+
+.hpphonenavbox {
+	width: 500px;
+	height: 896.2707px;
+	background-color: transparent;
+	background-image: url("Media/HandHoldingPhone2.png")
+	
+}
+
+.icon1 {
+	width: 37.2229px;
+	height: 37.2229px;
+	background-color: transparent;
+	background-image: url();
+}
+
+.icon2 {
+	width: 37.2229px;
+	height: 37.2229px;
+	background-color: transparent;
+	background-image: url();
+}
+
+.icon3 {
+	width: 37.2229px;
+	height: 37.2229px;
+	background-color: transparent;
+	background-image: url();
+}
+
+.icon4 {
+	width: 37.2229px;
+	height: 37.2229px;
+	background-color: transparent;
+	background-image: url();
+}
+
+/* Cursor */
+
+.circle4 {
+  height: 25px;
+  width: 25px;
+  position: fixed; 
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  z-index: 99999999;
+   background-image: url("Media/AppleCursor.png");
+}
+
+

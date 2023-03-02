@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	
+		
+	<head>
+		<title> Zaid Irfan's Resource Web </title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Page Background -->
+		
+		<style>
+			body {
+				background-image: url('Media/HomePageBackground.jpg');
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	
+		
+	<body>
+		<!-- Header -->
+		
+		<div class="hpheader"> Zaid Irfan's Resource Web </div>
+		
+		<!-- Subhead -->
+		
+		<div class="hpsubhead"> The Smartphone </div>
+		
+		<!-- Paragraph -->
+		
+		<div class="hppara"> On June 29th, 2007, Steve Jobs introduced the first touch-based smartphone to the world. September of that year also saw the release of the iPod Touch, which I must have gotten my hands on sometime around 2007-2009. I remember sitting on the couch in awe at what was before me; a fruit-slicing game whereby my index-finger was the blade. Neither the GameBoy, GameCube, or Nintendo Wii could compare to this tiny marvel of technology. This website serves as a nostalgia trip to some of the most popular phone games.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div>
+		
+		<!-- IPhone Navigation -->
+		
+		<img src="Media/HandHoldingPhone.png" class="hpphonenavigation" alt="A graphic version of the late Steve Jobs' hand holding an iPod Touch with app icons for Temple Run and Bubble Shooter that double as navigation buttons for this website about nostalgic smartphone video games.">
+		
+		<!-- Buttons to Different Pages -->
+		
+		<a href="BubbleShooter.html" onClick="BubbleShooter.html">
+		<img src="Media/BubbleShooterIcon.png" class="hpbsbutton" type="button" alt=>
+		</a>
+		
+		<a href="TempleRun.html" onClick="TempleRun.html">
+		<img src="Media/TempleRunIcon.png" class="hptrbutton" alt=>
+		</a>
+		
+		<img src="Media/InProgressIcon.png" class="hpnabutton" alt=>
+		
+		<img src="Media/InProgressIcon.png" class="hpnabutton2" alt=>
+		
+		<!-- Buttons to Steve Jobs' iPhone Reveal -->	
+		
+		<a
+		class="hpstevejobsbutton" target="_blank" href="http://stackoverflow.com" onclick="window.location.href='http://stackoverflow.com';"> Watch the iPhone Reveal Here!
+		</a>
+		
+		<!-- Apple Cursor -->
+		
+		<div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+		</div>
+
+	</body>
+
+	<!-- Apple Cursor Script -->
+		
+	<script> 
+
+	const coords = { x: 0, y: 0 };
+	const circles = document.querySelectorAll(".circle4");
+
+	const colors = [
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent"
+	  
+	];
+
+	circles.forEach(function (circle, index) {
+	  circle.x = 0;
+	  circle.y = 0;
+	  circle.style.backgroundColor = colors[index % colors.length];
+	});
+
+	window.addEventListener("mousemove", function(e){
+	  coords.x = e.clientX;
+	  coords.y = e.clientY;
+
+	});
+
+	function animateCircles() {
+
+	  let x = coords.x;
+	  let y = coords.y;
+
+	  circles.forEach(function (circle, index) {
+		circle.style.left = x - 12 + "px";
+		circle.style.top = y - 12 + "px";
+
+		circle.style.scale = (circles.length - index) / circles.length;
+
+		circle.x = x;
+		circle.y = y;
+
+		const nextCircle = circles[index + 1] || circles[0];
+		x += (nextCircle.x - x) * 0.3;
+		y += (nextCircle.y - y) * 0.3;
+	  });
+
+	  requestAnimationFrame(animateCircles);
+	}
+
+	animateCircles();
+
+	</script>	
+	
+</html>

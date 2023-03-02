@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>hpanimatedbg</title>
+		<link href="animatedbg.css" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		
+		<div class="container">
+			<div class="bubbles">
+			<span style= "--i:11;" ></span>
+			<span style= "--i:12;" ></span>
+			<span style= "--i:14;" ></span>
+			<span style= "--i:20;" ></span>
+			<span style= "--i:28;" ></span>
+			<span style= "--i:16;" ></span>
+			<span style= "--i:18;" ></span>
+			<span style= "--i:19;" ></span>
+			<span style= "--i:14;" ></span>
+			<span style= "--i:12;" ></span>
+			<span style= "--i:29;" ></span>
+			<span style= "--i:28;" ></span>
+			<span style= "--i:30;" ></span>
+			<span style= "--i:19;" ></span>
+			<span style= "--i:13;" ></span>
+			<span style= "--i:25;" ></span>
+			<span style= "--i:27;" ></span>
+			<span style= "--i:19;" ></span>
+			<span style= "--i:24;" ></span>
+			<span style= "--i:23;" ></span>
+			<span style= "--i:12;" ></span>
+			<span style= "--i:18;" ></span>
+			<span style= "--i:27;" ></span>
+			<span style= "--i:11;" ></span>
+			<span style= "--i:25;" ></span>
+			<span style= "--i:27;" ></span>
+			<span style= "--i:19;" ></span>
+			<span style= "--i:24;" ></span>
+			
+			</div>
+		</div>
+		
+		<!-- Header -->
+		
+		<div class="hpheader" > Zaid Irfan's Resource Web </div>
+		
+		<!-- Subhead and Paragraph 1 -->
+		
+		<div class="hpbox1">
+			<div class="hpsubhead"> The Smartphone</div>
+			<div class="hppara"> On June 29th, 2007, Steve Jobs introduced the first touch-based smartphone to the world. September of that year also saw the release of the iPod Touch, which I must have gotten my hands on sometime around 2007-2009. I remember sitting on the couch in awe at what was before me; a fruit-slicing game whereby my index-finger was the blade. Neither the GameBoy, GameCube, or Nintendo Wii could compare to this tiny marvel of technology. This website serves as a nostalgia trip to some of the most popular phone games. </div>
+		</div>
+		
+		<!-- Subhead and Paragraph 2 -->
+		
+		
+		<!-- Apple Phone Navigation Div -->
+		
+		<div class="hpphonenavbox">
+			<div class="icon1" ></div>
+			<div class="icon2"></div>
+			<div class="icon3" ></div>
+			<div class="icon4"></div>
+		
+		</div>
+		
+		<!-- Apple Cursor Divs -->
+		
+		<div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+			<div class="circle4"></div>
+		</div>
+
+	<!-- Apple Cursor Script -->
+		
+	<script> 
+
+	const coords = { x: 0, y: 0 };
+	const circles = document.querySelectorAll(".circle4");
+
+	const colors = [
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent"
+	  
+	];
+
+	circles.forEach(function (circle, index) {
+	  circle.x = 0;
+	  circle.y = 0;
+	  circle.style.backgroundColor = colors[index % colors.length];
+	});
+
+	window.addEventListener("mousemove", function(e){
+	  coords.x = e.clientX;
+	  coords.y = e.clientY;
+
+	});
+
+	function animateCircles() {
+
+	  let x = coords.x;
+	  let y = coords.y;
+
+	  circles.forEach(function (circle, index) {
+		circle.style.left = x - 12 + "px";
+		circle.style.top = y - 12 + "px";
+
+		circle.style.scale = (circles.length - index) / circles.length;
+
+		circle.x = x;
+		circle.y = y;
+
+		const nextCircle = circles[index + 1] || circles[0];
+		x += (nextCircle.x - x) * 0.8;
+		y += (nextCircle.y - y) * 0.8;
+	  });
+
+	  requestAnimationFrame(animateCircles);
+	}
+
+	animateCircles();
+
+	</script>	
+		
+		
+	</body>
+	
+</html>

@@ -241,14 +241,14 @@ a {
 
 
 .templerunicons {
-	background-image: url("Media/AppleSymbolRed.svg");
-	background-size: 80% auto;
+	background-image: url("Media/TempleRunSymbol.svg");
+	background-size: 65% auto;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	aspect-ratio: 1/1;
 	width: 7vmin;
 	margin: 1vmin;
-	background-color: white;
+	background-color: #752900;
 	border-radius: 25%;
 }
 
@@ -305,14 +305,14 @@ a {
 }
 
 .nickicons2 {
-	background-image: url("Media/AppleSymbolRed.svg");
+	background-image: url("Media/NickSymbol.svg");
 	background-size: 80% auto;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	aspect-ratio: 1/1;
 	width: 7vmin;
 	margin: 1vmin;
-	background-color: white;
+	background-color: #7F5845;
 	border-radius: 25%;
 }
 
@@ -323,14 +323,14 @@ a {
 }
 
 .oliviaicons2 {
-	background-image: url("Media/AppleSymbolRed.svg");
-	background-size: 80% auto;
+	background-image: url("Media/OliviaSymbol.svg");
+	background-size: 50% auto;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	aspect-ratio: 1/1;
 	width: 7vmin;
 	margin: 1vmin;
-	background-color: white;
+	background-color: #FEFFE0;
 	border-radius: 25%;
 }
 

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+		
+	<head>
+		<title> Temple Run </title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- Page Background -->
+	
+		<style>
+			body {
+				background-image: url('Media/TempleRunBackground.jpg');
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+		
+	</head>
+		
+	<body>
+		
+		<!-- Header -->
+		
+		<div class="trheader"> Temple Run </div>
+		
+		<!-- IPhone Navigation -->
+		
+		
+		
+		<!-- Stairs Cursor -->
+		<div>
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		<img src="Media/DiamondCursor.png" class="circle3" alt="">
+		</div>
+
+	</body>
+
+	<!-- Stairs Cursor Script -->
+		
+	<script> 
+
+	const coords = { x: 0, y: 0 };
+	const circles = document.querySelectorAll(".circle3");
+
+	const colors = [
+	  "#cbcbcb",
+	  "#c0c0c0",
+	  "#b5b5b5",
+	  "#aaaaaa",
+	  "#a3a3a3",
+	  "#9a9a9a",
+	  "#909090",
+	  "#848484",
+	  "#797979",
+	  "#727272",
+	  "#6b6b6b",
+	  "#636363",
+	  "#5e5e5e",
+	  "#575757",
+	  "#525252",
+	  "#4a4a4a",
+	  "#444444",
+	  "#3f3f3f",
+	  "#393939",
+	  "#363636",
+	  "#343434",
+	  "#2d2d2d"
+	  
+	];
+
+	circles.forEach(function (circle, index) {
+	  circle.x = 0;
+	  circle.y = 0;
+	  circle.style.backgroundColor = colors[index % colors.length];
+	});
+
+	window.addEventListener("mousemove", function(e){
+	  coords.x = e.clientX;
+	  coords.y = e.clientY;
+
+	});
+
+	function animateCircles() {
+
+	  let x = coords.x;
+	  let y = coords.y;
+
+	  circles.forEach(function (circle, index) {
+		circle.style.left = x - 12 + "px";
+		circle.style.top = y - 12 + "px";
+
+		circle.style.scale = (circles.length - index) / circles.length;
+
+		circle.x = x;
+		circle.y = y;
+
+		const nextCircle = circles[index + 1] || circles[0];
+		x += (nextCircle.x - x) * 0.3;
+		y += (nextCircle.y - y) * 0.3;
+	  });
+
+	  requestAnimationFrame(animateCircles);
+	}
+
+	animateCircles();
+
+	</script>
+		
+	</html>

@@ -1,0 +1,565 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> About </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	
+	<style>
+		
+	 	/* Universal */
+		
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: "LoRes 12 OT";
+		}
+		
+		 /* Animated Background */
+		
+		body {
+		cursor: none;
+		max-height: 135vh;
+		background: black;
+		}
+
+		.background {
+		position: relative;
+		width: 100vw;
+		height: 135vh;
+		overflow: hidden;
+		}
+		
+		.apples {
+		position: relative;
+		display: flex;
+		}
+
+		.apples span {
+			position: relative;
+			aspect-ratio: 1/1;
+			width: 3vmin;
+			margin: auto;
+			background-color: transparent;
+			background-image: url("Media/AppleSymbolGray.svg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			animation: animate 15s linear infinite;
+			animation-duration: calc(125s / var(--i));
+		}
+
+		@keyframes animate {
+			0% {transform: translateY(135vh)}
+			100% {transform: translateY(0vh)}
+		}
+		
+		/* Page Elements */
+		
+		.header {
+		width: 100vw;
+		height: 25vh;
+		position: absolute;
+		top: 0vh;
+		background-color: red;
+		text-align: center;
+		font-size: 5vmin;
+		color: black;
+		padding: 3vmin;
+		}
+		
+		.box1 {
+		aspect-ratio: 1/1.6;
+		width: 45vmin;
+		background-color: white;
+		color: black;
+		position: absolute;
+		top: 35vh;
+		left: 50%;
+		transform: translate(-50%,0);
+		margin: auto;
+		border-radius: 2vmin;
+		float: right;
+		}
+		
+		.subhead {
+		width: 45vmin;
+		height: 2.5vmax;
+		text-align: center;
+		font-size: 4vmin;
+		font-weight: bold;
+		color: red;
+		padding-top: 2vmin;
+		float: inherit;
+		}
+
+		.para {
+		width: 45vmin;
+		padding: 2.5vmin;
+		text-align: left;
+		font-size: 2.5vmin;
+		float: inherit;
+		top: 2vmin;
+		}
+		
+		.box2 {
+		width: 40vmin;
+		background-color: white;
+		color: white;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%,0%);
+		bottom: 3vh;
+		border-radius: 2vmin;
+		text-align: center;
+		float: inherit;
+		}
+
+		.box2:hover {
+		background-color: red;
+		color: white;
+		}
+		
+		.steamlink {
+		margin: auto;
+		font-size: 3.5vmin;
+		text-align: center;
+		font-weight: bold;
+		color: black;
+		float: inherit;
+		}
+
+		.steamlink:hover {
+			color: white;
+		}
+
+		/* Navigation Icons */
+		
+		a {
+		text-decoration: none;
+		}
+
+		.iconcontainer {
+			position: absolute;
+			display: flex;
+			top: 10vh;
+			left: 50%;
+			transform: translate(-50%,0)
+		}
+
+		.indexicons {
+			background-image: url("Media/AppleSymbolRed.svg");
+			background-size: 80% auto;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			aspect-ratio: 1/1;
+			width: 7vmin;
+			margin: 1vmin;
+			background-color: white;
+			border-radius: 25%;
+		}
+
+
+		.indexicons:hover {
+			border: 0.5vmin solid black;
+
+		}
+
+		.bubbleshootericons {
+			background-image: url("Media/BubbleSymbol.svg");
+			background-size: 110% auto;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			aspect-ratio: 1/1;
+			width: 7vmin;
+			margin: 1vmin;
+			background-color: white;
+			border-radius: 25%;
+		}
+
+
+		.bubbleshootericons:hover {
+			border: 0.5vmin solid black;
+
+		}
+
+
+		.templerunicons {
+			background-image: url("Media/AppleSymbolRed.svg");
+			background-size: 80% auto;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			aspect-ratio: 1/1;
+			width: 7vmin;
+			margin: 1vmin;
+			background-color: white;
+			border-radius: 25%;
+		}
+
+
+		.templerunicons:hover {
+			border: 0.5vmin solid black;
+
+		}
+
+		.fruitninjaicons {
+			background-image: url("Media/FruitNinjaSymbol.svg");
+			background-size: 110% auto;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			aspect-ratio: 1/1;
+			width: 7vmin;
+			margin: 1vmin;
+			background-color: #3F230E;
+			border-radius: 25%;
+		}
+
+
+		.fruitninjaicons:hover {
+			border: 0.5vmin solid black;
+
+		}
+
+		.icontext {
+			position: absolute;
+			display: flex;
+			top: 18vh;
+			left: 50%;
+			transform: translate(-50%,0)
+		}
+
+		.icontext span {
+			text-align: center;
+			color: black;
+			font-size: 2vmin;
+			aspect-ratio: 1/1;
+			width: 7vmin;
+			margin: 1vmin;
+			background-color: transparent;
+			border-radius: 25%;
+			font-weight: bold;
+		}
+
+		.nickicons {
+			background-image: url("Media/AppleSymbolRed.svg");
+			background-size: 80% auto;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			aspect-ratio: 1/1;
+			width: 7vmin;
+			margin: 1vmin;
+			background-color: white;
+			border-radius: 25%;
+		}
+
+
+		.nickicons:hover {
+			border: 0.5vmin solid black;
+
+		}
+
+		.oliviaicons {
+			background-image: url("Media/AppleSymbolRed.svg");
+			background-size: 80% auto;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			aspect-ratio: 1/1;
+			width: 7vmin;
+			margin: 1vmin;
+			background-color: white;
+			border-radius: 25%;
+		}
+
+
+		.oliviaicons:hover {
+			border: 0.5vmin solid black;
+
+		}
+
+		.snakeicons {
+			background-image: url("Media/SnakeSymbol.svg");
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			aspect-ratio: 1/1;
+			width: 7vmin;
+			margin: 1vmin;
+			background-color: white;
+			border-radius: 25%;
+		}
+
+
+		.snakeicons:hover {
+			border: 0.5vmin solid black;
+
+		}
+
+		.abouticons {
+			background-image: url("Media/AboutSymbol.svg");
+			background-size: 55% auto;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			aspect-ratio: 1/1;
+			width: 7vmin;
+			margin: 1vmin;
+			background-color: white;
+			border-radius: 25%;
+		}
+
+
+		.abouticons:hover {
+			border: 0.5vmin solid black;
+		}
+
+		/* Cursor */
+
+		.applecursor {
+		  width: 3vmin;
+		  aspect-ratio: 1/1;
+		  position: fixed; 
+		  top: 0px;
+		  left: 0px;
+		  pointer-events: none;
+		  z-index: 99999999;
+		  background-image: url("Media/AppleSymbolRed.svg");
+		  background-size: contain;
+		  background-repeat: no-repeat;
+		  background-position: 50% 50%;
+
+		}
+		
+		/* Animated Background */
+		
+	</style>
+
+	<body>
+		
+		<!-- Animated Backgrounds -->
+		
+		<div class="background">
+			<div class="apples">
+			<span style= "--i:11;" ></span>
+			<span style= "--i:27;" ></span>
+			<span style= "--i:16;" ></span>
+			<span style= "--i:35;" ></span>
+			<span style= "--i:24;" ></span>
+			<span style= "--i:36;" ></span>
+			<span style= "--i:19;" ></span>
+			<span style= "--i:39;" ></span>
+			<span style= "--i:22;" ></span>
+			<span style= "--i:28;" ></span>
+			<span style= "--i:37;" ></span>
+			<span style= "--i:17;" ></span>
+			<span style= "--i:40;" ></span>
+			<span style= "--i:38;" ></span>
+			<span style= "--i:31;" ></span>
+			<span style= "--i:14;" ></span>
+			<span style= "--i:29;" ></span>
+			<span style= "--i:18;" ></span>
+			<span style= "--i:25;" ></span>
+			<span style= "--i:34;" ></span>
+			<span style= "--i:21;" ></span>
+			<span style= "--i:15;" ></span>
+			<span style= "--i:30;" ></span>
+			<span style= "--i:20;" ></span>
+			<span style= "--i:32;" ></span>
+			<span style= "--i:26;" ></span>
+			<span style= "--i:12;" ></span>
+			<span style= "--i:23;" ></span>
+			<span style= "--i:33;" ></span>
+			<span style= "--i:13;" ></span>
+			<span style= "--i:31;" ></span>
+			<span style= "--i:14;" ></span>
+			<span style= "--i:29;" ></span>
+			<span style= "--i:18;" ></span>
+			<span style= "--i:25;" ></span>
+			<span style= "--i:37;" ></span>
+			<span style= "--i:17;" ></span>
+			<span style= "--i:40;" ></span>
+			<span style= "--i:38;" ></span>
+			<span style= "--i:31;" ></span>
+			<span style= "--i:14;" ></span>
+			<span style= "--i:35;" ></span>
+			<span style= "--i:24;" ></span>
+			<span style= "--i:36;" ></span>
+			
+			</div>
+		</div>
+		
+		<!-- Header -->
+		
+		<div class="header" > About </div>
+		
+		<!-- Subhead and Paragraph 1 -->
+		
+		<div class="box1">
+			<div class="subhead"> You Made It! </div>
+			<div class="para"> Hopefully if you're like me and prefer to click each icon in order, left-to-right and top-to-bottom, this is the last page in your visit. Nonetheless, I hope you have enjoyed looking at all the pages and learning a bit about the origin of the games! I have always been avideo game enthusiast! I take pride in knowing I've used every gaming console since the GameBoy, and even more so that I still have a connection with video games today. The website's design was heavily inspired by the 8-bit aesthetic and super-saturated colors of the early 2000s web. Overall, "fun" is what this website has been all about for me, and I hope that the same goes or has gone for you! </div>
+		</div>
+		
+		
+		<!-- Icons -->
+		
+		<div class="iconcontainer">
+				<a href="index.html" onClick="index.html">
+				<div class="indexicons"> </div>
+				</a>
+				<a href="BubbleShooter.html" onClick="BubbleShooter.html">
+				<div class="bubbleshootericons"> </div>
+				</a>
+				<a href="TempleRun.html" onClick="TempleRun.html">
+				<div class="templerunicons"> </div>
+				</a>
+				<a href="FruitNinja.html" onClick="FruitNinja.html">
+				<div class="fruitninjaicons"> </div>
+				</a>
+				<a href="https://munsternicholas.github.io/Recipe-website/" onClick="https://munsternicholas.github.io/Recipe-website/">
+				<div class="nickicons"> </div>
+				</a>
+				<a href="https://oliviamiele.github.io/ice-cream-world/" onClick="https://oliviamiele.github.io/ice-cream-world/">
+				<div class="oliviaicons"> </div>
+				</a>
+				<a href="SnakeGame.html" onClick="SnakeGame.html">
+				<div class="snakeicons"> </div>
+				</a>
+				<a href="AboutMe.html" onClick="AboutMe.html">
+				<div class="abouticons"> </div>
+				</a>
+			</div>
+			<div class="icontext">
+				<span> Home	</span>
+				<span> Bubble Shooter </span>
+				<span> Temple Run </span>
+				<span> Fruit Ninja </span>
+				<span> Nick's Site	</span>
+				<span> Olivia's Site </span>
+				<span> Snake </span>
+				<span> About </span>
+			</div>
+		
+		<!-- Apple Cursor Divs -->
+		
+		<div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+			<div class="applecursor"></div>
+		</div>
+
+	<!-- Apple Cursor Script -->
+		
+	<script> 
+
+	const coords = { x: 0, y: 0 };
+	const circles = document.querySelectorAll(".applecursor");
+
+	const colors = [
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent",
+	  "transparent"
+	  
+	];
+
+	circles.forEach(function (circle, index) {
+	  circle.x = 0;
+	  circle.y = 0;
+	  circle.style.backgroundColor = colors[index % colors.length];
+	});
+
+	window.addEventListener("mousemove", function(e){
+	  coords.x = e.clientX;
+	  coords.y = e.clientY;
+
+	});
+
+	function animateCircles() {
+
+	  let x = coords.x;
+	  let y = coords.y;
+
+	  circles.forEach(function (circle, index) {
+		circle.style.left = x - 12 + "px";
+		circle.style.top = y - 12 + "px";
+
+		circle.style.scale = (circles.length - index) / circles.length;
+
+		circle.x = x;
+		circle.y = y;
+
+		const nextCircle = circles[index + 1] || circles[0];
+		x += (nextCircle.x - x) * 0.4;
+		y += (nextCircle.y - y) * 0.4;
+	  });
+
+	  requestAnimationFrame(animateCircles);
+	}
+
+	animateCircles();
+
+	</script>
+		
+	<script>
+      function displayTime() {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+
+        var meridiem = "AM"; // default to AM
+        if (hours > 12) {
+          hours = hours - 12;
+          meridiem = "PM";
+        }
+        if (hours === 0) {
+          hours = 12;
+        }
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+
+        var clockDiv = document.getElementById('timebox');
+        clockDiv.innerHTML = hours + ":" + minutes + " " + meridiem;
+      }
+
+      setInterval(displayTime, 1000);
+    </script>
+
+	</body>
+		
+</html>

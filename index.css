@@ -1,0 +1,465 @@
+@charset "utf-8";
+
+/* Universal */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "LoRes 12 OT";
+}
+
+
+
+/* Animated Background */
+
+body {
+	cursor: none;
+	max-height: 120vh;
+	background: black;
+}
+
+.background {
+	position: relative;
+	width: 100vw;
+	height: 120vh;
+	overflow: hidden;
+}
+
+.apples {
+	position: relative;
+	display: flex;
+}
+
+.apples span {
+	position: relative;
+	aspect-ratio: 1/1;
+	width: 3vmin;
+	margin: auto;
+	background-color: transparent;
+	background-image: url("Media/AppleSymbolGray.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	animation: animate 15s linear infinite;
+	animation-duration: calc(125s / var(--i));
+}
+
+@keyframes animate {
+	0% {transform: translateY(120vh)}
+	100% {transform: translateY(0vh)}
+}
+
+/* Homepage Elements */
+
+.header {
+	width: 100vw;
+    background-color: red;
+	font-size: 5vmin;
+	font-weight: bold;
+    color: white;
+    position: absolute;
+	top: 0vh;
+    text-align: center;
+	padding: 3vmin;
+}
+
+.box1 {
+	aspect-ratio: 1/1.6;
+	width: 45vmin;
+	background-color: white;
+	color: black;
+	position: absolute;
+	top: 20vh;
+	right: 25vw;
+	margin: auto;
+	border-radius: 2vmin;
+	float: right;
+}
+
+.box2 {
+	width: 40vmin;
+	background-color: white;
+	color: white;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0%);
+	bottom: 3vh;
+	border-radius: 2vmin;
+	text-align: center;
+	float: inherit;
+}
+
+.box2:hover {
+	background-color: red;
+	color: white;
+}
+
+.iPhoneRevealVideo {
+	margin: auto;
+	font-size: 3.5vmin;
+	text-align: center;
+	font-weight: bold;
+	color: black;
+	float: inherit;
+}
+
+.iPhoneRevealVideo:hover {
+	color: white;
+}
+
+.subhead {
+	width: 45vmin;
+	height: 2.5vmax;
+	text-align: center;
+	font-size: 4vmin;
+	font-weight: bold;
+	color: red;
+	padding-top: 2vmin;
+	float: inherit;
+}
+
+.para {
+	width: 45vmin;
+	padding: 2.5vmin;
+	text-align: left;
+	font-size: 2.5vmin;
+	float: inherit;
+	top: 2vmin;
+}
+
+/* Phone Navigation Container */
+
+.phone {
+	aspect-ratio: 1/1.6;
+	width: 45vmin;
+	background-color: red;
+	position: absolute;
+	top: 20vh;
+	left: 25vw;
+	margin: auto;
+	padding: 15px;
+	border-radius: 2vmin;
+	float: right;
+}
+
+.screen {
+	aspect-ratio: 1/1.4;
+	background-color: black;
+	width: 38vmin;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	float: inherit;
+	
+}
+
+.camera {
+	aspect-ratio: 1/1;
+	width: 2vmin;
+	border-radius: 50%;
+	position: absolute;
+	top: 4vh;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: black;
+}
+
+.powerbutton {
+	aspect-ratio: 1/1;
+	width: 7.5vmin;
+	position: absolute;
+	background-color: black;
+	border-radius: 50%;
+	float: inherit;
+	bottom: 1vh;
+	left: 50%;
+	transform: translate(-50%, 0);
+	
+}
+
+.powerbuttonsquare {
+	aspect-ratio: 1/1;
+	width: 4vmin;
+	position: absolute;
+	background-color: white;
+	border-radius: 25%;
+	float: inherit;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+a {
+	text-decoration: none;
+}
+
+.iconcontainer {
+	position: absolute;
+	display: flex;
+	top: 4vmin;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+
+.indexicons {
+	background-image: url("Media/AppleSymbolRed.svg");
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: 45% 45%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.indexicons:hover {
+	border: 0.5vmin solid red;
+	
+}
+
+.bubbleshootericons {
+	background-image: url("Media/BubbleSymbol.svg");
+	background-size: 110% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.bubbleshootericons:hover {
+	border: 0.5vmin solid red;
+	
+}
+
+
+.templerunicons {
+	background-image: url("Media/AppleSymbolRed.svg");
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.templerunicons:hover {
+	border: 0.5vmin solid red;
+	
+}
+
+.fruitninjaicons {
+	background-image: url("Media/FruitNinjaSymbol.svg");
+	background-size: 110% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-color: #3F230E;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	border-radius: 25%;
+}
+
+
+.fruitninjaicons:hover {
+	border: 0.5vmin solid red;
+	
+}
+
+.icontext {
+	position: absolute;
+	display: flex;
+	top: 12vmin;
+	left: 50%;
+	transform: translate(-50%,0);
+	font-weight: bold;
+}
+
+.icontext span {
+	text-align: center;
+	color: white;
+	font-size: 2vmin;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: transparent;
+	border-radius: 25%;
+}
+
+.iconcontainer2 {
+	position: absolute;
+	display: flex;
+	top: 18vmin;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+
+.nickicons2 {
+	background-image: url("Media/AppleSymbolRed.svg");
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.nickicons2:hover {
+	border: 0.5vmin solid red;
+	
+}
+
+.oliviaicons2 {
+	background-image: url("Media/AppleSymbolRed.svg");
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.oliviaicons2:hover {
+	border: 0.5vmin solid red;
+	
+}
+
+.snakeicons2 {
+	background-image: url("Media/SnakeSymbol.svg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.snakeicons2:hover {
+	border: 0.5vmin solid red;
+	
+}
+
+.abouticons {
+	background-image: url("Media/AboutSymbol.svg");
+	background-size: 55% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.abouticons:hover {
+	border: 0.5vmin solid red;
+	
+}
+
+.icontext2 {
+	position: absolute;
+	display: flex;
+	top: 26vmin;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+
+.icontext2 span {
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	font-size: 2vmin;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: transparent;
+	border-radius: 25%;
+}
+
+#timebox {
+	padding-top: 0.25vmin;
+	font-size: 2vmin;
+	position: absolute;
+	top: 0vmin;
+	left: 50%;
+	transform: translate(-50%,0);
+	width: 38vmin;
+	height: 3vmin;
+	text-align: center;
+	background-color: black;
+	color: white;
+	border-bottom: 0.25vmin solid white;
+	
+	
+}
+
+.ipodtext {
+	padding-top: 0.25vmin;
+	font-size: 2vmin;
+	position: absolute;
+	left: 1vmin;
+	color: white;
+}
+
+/* Homepage Cursor */
+
+.applecursor {
+  width: 3vmin;
+  aspect-ratio: 1/1;
+  position: fixed; 
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  z-index: 99999999;
+  background-image: url("Media/AppleSymbolRed.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  
+}
+
+/* Snake Game */
+
+#game {
+	position: absolute;
+	left: 20vw;
+	float: left;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.snakegametext {
+	padding: 4vmin;
+	color: white;
+	border: 1px solid white;
+	width: 400px;
+	height: 200px;
+	font-size: 3vmin;
+	position: absolute;
+	right: 20vw;
+	margin-top: auto;
+	margin-bottom: auto;
+	float: right;
+	
+}
+

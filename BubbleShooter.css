@@ -1,0 +1,441 @@
+@charset "utf-8";
+
+/* Universal */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "LoRes 12 OT";
+}
+
+/* Animated Background */
+
+body {
+	max-height: 185vh;
+	background: #dfc7a7;
+	cursor: none;
+}
+
+.background {
+	position: relative;
+	width: 100vw;
+	height: 185vh;
+	overflow: hidden;
+}
+
+.bubbles {
+	position: relative;
+	display: flex;
+}
+
+.bubbles span {
+	position: relative;
+	aspect-ratio: 1/1;
+	width: 3vmin;
+	margin: auto;
+	background-color: #9696FF;
+	border-radius: 50%;
+	box-shadow: inset -0.5vmin -0.5vmin 1vmin #444;
+	animation: animate 15s linear infinite;
+	animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(2n) {
+	background-color: #96FFFF;
+}
+
+.bubbles span:nth-child(3n) {
+	background-color: #FF9696;
+}
+
+.bubbles span:nth-child(4n) {
+	background-color: #FF96FF;
+}
+
+.bubbles span:nth-child(5n) {
+	background-color: #96FF96;
+}
+
+.bubbles span:nth-child(6n) {
+	background-color: #FFFF96;
+}
+
+@keyframes animate {
+	0% {transform: translateY(185vh)}
+	100% {transform: translateY(0vh)}
+}
+
+/* Homepage Elements */
+
+.header {
+	width: 100vw;
+	height: 25vh;
+	position: absolute;
+	top: 0vh;
+	background-color: #978164;
+	font-size: 5vmin;
+	color: transparent;
+	padding: 3vmin;
+	
+}
+
+.headergradient {
+	width: 22vw;
+	left: 50%;
+	transform: translate(-50%,0);
+    background-color: white;
+	font-size: 5vmin;
+	font-weight: bold;
+    background: -webkit-linear-gradient(0deg, #9696FF, #96FFFF, #FF9696, #FF96FF, #96FF96, #FFFF96);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    position: absolute;
+	top: 0vh;
+    text-align: center;
+	padding: 3vmin;
+}
+
+.box1 {
+	aspect-ratio: 1/1;
+	width: 60vmin;
+	color: black;
+	position: absolute;
+	top: 35vh;
+	right: 20vw;
+	margin: auto;
+	border-radius: 50%;
+	float: right;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.box1:hover {
+	background-color: #9696FF;
+}
+
+
+.subhead {
+	width: 60vmin;
+	aspect-ratio: 1/1;
+	text-align: center;
+	font-size: 4vmin;
+	font-weight: bold;
+	color: black;
+	position: absolute;
+	top: 5vh;
+	left: 50%;
+	transform:translate(-50%,0);
+	padding-top: 2vmin;
+	float: inherit;
+}
+
+.subhead:hover {
+	color: #FF96FF;
+}
+
+.para {
+	width: 45vmin;
+	padding: 2vmin;
+	text-align: left;
+	position: absolute;
+	top: 10.5vh;
+	left: 50%;
+	transform: translate(-50%,0);
+	font-size: 2.5vmin;
+	float: inherit;
+}
+
+.gameplaylink {
+	color: white;
+}
+.box2 {
+	aspect-ratio: 1/1;
+	width: 60vmin;
+	color: black;
+	position: absolute;
+	top: 55vh;
+	left: 20vw;
+	margin: auto;
+	border-radius: 50%;
+	float: left;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.box2:hover {
+	background-color: #96FFFF;
+}
+.subhead2 {
+	width: 60vmin;
+	aspect-ratio: 1/1;
+	text-align: center;
+	font-size: 4vmin;
+	font-weight: bold;
+	color: black;
+	position: absolute;
+	top: 5vh;
+	left: 50%;
+	transform:translate(-50%,0);
+	padding-top: 2vmin;
+	float: inherit;
+}
+
+.subhead2:hover {
+	color: #FF9696;
+}
+
+.box3 {
+	aspect-ratio: 1/1;
+	width: 45vmin;
+	color: black;
+	position: absolute;
+	top: 105vh;
+	right: 23.5vw;
+	margin: auto;
+	border-radius: 50%;
+	float: right;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.box3:hover {
+	background-color: #96FF96;
+}
+
+.worldrecordlink {
+	color: black;
+	border-radius: 50%;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 3vmin;
+	font-weight: bold;
+	transform: translate(-50%,-50%);
+	
+}
+
+.box4 {
+	aspect-ratio: 1/1;
+	width: 45vmin;
+	color: black;
+	position: absolute;
+	top: 125vh;
+	left: 23.5vw;
+	margin: auto;
+	border-radius: 50%;
+	float: left;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.box4:hover {
+	background-color: #FFFF96;
+}
+
+
+
+/* Navigation Container */
+
+a {
+	text-decoration: none;
+}
+
+.iconcontainer {
+	position: absolute;
+	display: flex;
+	top: 10vh;
+	left: 50%;
+	transform: translate(-50%,0)
+}
+
+.indexicons {
+	background-image: url("Media/AppleSymbolRed.svg");
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.indexicons:hover {
+	border: 0.5vmin solid black;
+	
+}
+
+.bubbleshootericons {
+	background-image: url("Media/BubbleSymbol.svg");
+	background-size: 110% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.bubbleshootericons:hover {
+	border: 0.5vmin solid black;
+	
+}
+
+
+.templerunicons {
+	background-image: url("Media/AppleSymbolRed.svg");
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.templerunicons:hover {
+	border: 0.5vmin solid black;
+	
+}
+
+.fruitninjaicons {
+	background-image: url("Media/FruitNinjaSymbol.svg");
+	background-size: 110% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: #3F230E;
+	border-radius: 25%;
+}
+
+
+.fruitninjaicons:hover {
+	border: 0.5vmin solid black;
+	
+}
+
+.icontext {
+	position: absolute;
+	display: flex;
+	top: 18vh;
+	left: 50%;
+	transform: translate(-50%,0)
+}
+
+.icontext span {
+	text-align: center;
+	color: black;
+	font-size: 2vmin;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: transparent;
+	border-radius: 25%;
+	font-weight: bold;
+}
+
+.nickicons {
+	background-image: url("Media/AppleSymbolRed.svg");
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.nickicons:hover {
+	border: 0.5vmin solid black;
+	
+}
+
+.oliviaicons {
+	background-image: url("Media/AppleSymbolRed.svg");
+	background-size: 80% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.oliviaicons:hover {
+	border: 0.5vmin solid black;
+	
+}
+
+.snakeicons {
+	background-image: url("Media/SnakeSymbol.svg");
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.snakeicons:hover {
+	border: 0.5vmin solid black;
+	
+}
+
+.abouticons {
+	background-image: url("Media/AboutSymbol.svg");
+	background-size: 55% auto;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	aspect-ratio: 1/1;
+	width: 7vmin;
+	margin: 1vmin;
+	background-color: white;
+	border-radius: 25%;
+}
+
+
+.abouticons:hover {
+	border: 0.5vmin solid black;
+}
+
+/* Homepage Cursor */
+
+.bubblecursor {
+  width: 3vmin;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: fixed; 
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  z-index: 99999999;;
+}
+

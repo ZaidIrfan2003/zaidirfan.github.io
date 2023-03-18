@@ -11,14 +11,14 @@
 
 body {
 	cursor: none;
-	max-height: 100vh;
+	max-height: 150vh;
 	background-color: #3F230E;
 }
 
 .background {
 	position: absolute;
 	width: 100vw;
-	height: 180vh;
+	height: 150vh;
 	background-image: url("Media/FruitNinjaBackground.svg");
 	background-size: 100% auto;
 	z-index: -9999999
@@ -38,15 +38,17 @@ body {
 }
 
 .headergradient {
-	width: 15vw;
+	width: 100vw;
 	left: 50%;
 	transform: translate(-50%,0);
     background-color: white;
 	font-size: 5vmin;
 	font-weight: bold;
-    background: -webkit-linear-gradient(0deg, #6d2387, #d82619, #ffcc3b, #fb6a22, #b6dc2d);
+    background: -webkit-linear-gradient(-45deg, #6d2387, #d82619, #ffcc3b, #fb6a22, #b6dc2d);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	background-size: 400% 400%;
+  	animation: gradient 10s ease infinite;
     position: absolute;
 	top: 0vh;
     text-align: center;
@@ -60,7 +62,7 @@ body {
 	color: black;
 	position: absolute;
 	top: 35vh;
-	right: 15vw;
+	right: 20vw;
 	margin: auto;
 	border-radius: 2vmin;
 	float: right;
@@ -73,7 +75,7 @@ body {
 	text-align: center;
 	font-size: 4vmin;
 	font-weight: bold;
-	color: white;
+	color: #CD7B41;
 	position: absolute;
 	top: 1vh;
 	left: 50%;
@@ -102,11 +104,98 @@ body {
 	color: black;
 	position: absolute;
 	top: 85vh;
-	right: 15vw;
+	right: 20vw;
 	margin: auto;
 	border-radius: 2vmin;
 	float: right;
 }
+
+.bladelink {
+	background: -webkit-linear-gradient(-45deg, #6d2387, #d82619, #ffcc3b, #fb6a22, #b6dc2d);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 400% 400%;
+  	animation: gradient 10s ease infinite;
+}
+
+.trailerframe {
+	width: 45vmin;
+	aspect-ratio: 1/1;
+	position: absolute;
+	left: 20vw;
+	top: 35vh;
+	float: left;
+	background-image: url("Media/TrailerSymbol.svg");
+	animation: rotate 5s linear infinite;
+	
+}
+
+.lemonbutton {
+	width: 20vmin;
+	aspect-ratio: 1/1;
+	position: absolute;
+	left: 26vw;
+	top: 47.5vh;
+	float: left;
+	background-image: url("Media/LemonSymbol.svg");
+	animation: rotatefruit 5s linear infinite;
+	
+}
+
+.lemonbutton:hover {
+	animation: none;
+}
+
+.gameframe {
+	width: 45vmin;
+	aspect-ratio: 1/1;
+	position: absolute;
+	left: 20vw;
+	top: 85vh;
+	float: left;
+	background-image: url("Media/OriginalSymbol.svg");
+	animation: rotate 5s linear infinite;
+	
+}
+
+.watermelonbutton {
+	width: 20vmin;
+	aspect-ratio: 1/1;
+	position: absolute;
+	left: 26vw;
+	top: 97.5vh;
+	float: left;
+	background-image: url("Media/WatermelonSymbol.svg");
+	animation: rotatefruit 5s linear infinite;
+	
+}
+
+.watermelonbutton:hover {
+	animation: none;
+}
+
+@keyframes rotate {
+	0% {
+		transform:rotate(0deg)
+	}
+	100% {
+		transform: rotate(360deg)
+	}
+}
+
+@keyframes rotatefruit {
+	0% {
+		transform:rotate(0deg)
+	}
+	100% {
+		transform: rotate(-360deg)
+	}
+}
+
+
+/* Fruit Ninja Buttons */
+
+
 
 /* Navigation Container */
 
@@ -136,7 +225,7 @@ a {
 
 
 .indexicons:hover {
-	border: 0.5vmin solid #dfc7a7;
+	border: 0.5vmin solid #CD7B41;
 	
 }
 
@@ -154,26 +243,26 @@ a {
 
 
 .bubbleshootericons:hover {
-	border: 0.5vmin solid #dfc7a7;
+	border: 0.5vmin solid #CD7B41;
 	
 }
 
 
 .templerunicons {
-	background-image: url("Media/AppleSymbolRed.svg");
-	background-size: 80% auto;
+	background-image: url("Media/TempleRunSymbol.svg");
+	background-size: 65% auto;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	aspect-ratio: 1/1;
 	width: 7vmin;
 	margin: 1vmin;
-	background-color: white;
+	background-color: #752900;
 	border-radius: 25%;
 }
 
 
 .templerunicons:hover {
-	border: 0.5vmin solid #dfc7a7;
+	border: 0.5vmin solid #CD7B41;
 	
 }
 
@@ -191,7 +280,7 @@ a {
 
 
 .fruitninjaicons:hover {
-	border: 0.5vmin solid #dfc7a7;
+	border: 0.5vmin solid #CD7B41;
 	
 }
 
@@ -216,38 +305,38 @@ a {
 }
 
 .nickicons {
-	background-image: url("Media/AppleSymbolRed.svg");
+	background-image: url("Media/NickSymbol.svg");
 	background-size: 80% auto;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	aspect-ratio: 1/1;
 	width: 7vmin;
 	margin: 1vmin;
-	background-color: white;
+	background-color: #7F5845;
 	border-radius: 25%;
 }
 
 
 .nickicons:hover {
-	border: 0.5vmin solid #dfc7a7;
+	border: 0.5vmin solid #CD7B41;
 	
 }
 
 .oliviaicons {
-	background-image: url("Media/AppleSymbolRed.svg");
-	background-size: 80% auto;
+	background-image: url("Media/OliviaSymbol.svg");
+	background-size: 50% auto;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	aspect-ratio: 1/1;
 	width: 7vmin;
 	margin: 1vmin;
-	background-color: white;
+	background-color: #FEFFE0;
 	border-radius: 25%;
 }
 
 
 .oliviaicons:hover {
-	border: 0.5vmin solid #dfc7a7;
+	border: 0.5vmin solid #CD7B41;
 	
 }
 
@@ -265,7 +354,7 @@ a {
 
 
 .snakeicons:hover {
-	border: 0.5vmin solid #dfc7a7;
+	border: 0.5vmin solid #CD7B41;
 	
 }
 
@@ -283,7 +372,7 @@ a {
 
 
 .abouticons:hover {
-	border: 0.5vmin solid #dfc7a7;
+	border: 0.5vmin solid #CD7B41;
 }
 /* Homepage Cursor */
 
@@ -291,22 +380,27 @@ a {
   -webkit-clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
   clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
   width: 3vmin;
-  background-color: white;
+  background: linear-gradient(-45deg, #6d2387, #d82619, #ffcc3b, #fb6a22, #b6dc2d);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
   aspect-ratio: 1/1;
   position: fixed; 
   top: 0px;
   left: 0px;
   pointer-events: none;
-  z-index: 99999999;;
+  z-index: 99999999;
 }
 
-/* Cursor Buttons */
-
-#bladecursorfirebutton {
-	position: absolute;
-	top: 50vh;
-	left: 20vw;
-	width: 6vmin;
-	aspect-ratio: 1/1.5;
-	
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
+
+

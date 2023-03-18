@@ -1,5 +1,5 @@
-# zaidirfan.github.io
+# Zaid Irfan's Resource Web
 
-Hello viewer and/or visitor. To get into my website go to this link:
+Hello designers, coders, and visitors! To get into my website, use the following link:
 
 https://zaidirfan2003.github.io/zaidirfan.github.io/

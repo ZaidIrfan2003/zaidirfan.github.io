@@ -1,4 +1,4 @@
-# Zaid Irfan's Resource Web
+# zaidirfan.github.io
 
 Hello designers, coders, and visitors! To get into my website, use the following link:
 

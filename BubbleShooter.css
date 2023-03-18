@@ -81,15 +81,17 @@ body {
 }
 
 .headergradient {
-	width: 22vw;
+	width: 100vw;
 	left: 50%;
 	transform: translate(-50%,0);
     background-color: white;
 	font-size: 5vmin;
 	font-weight: bold;
-    background: -webkit-linear-gradient(0deg, #9696FF, #96FFFF, #FF9696, #FF96FF, #96FF96, #FFFF96);
+    background: -webkit-linear-gradient(-45deg, #9696FF, #96FFFF, #FF9696, #FF96FF, #96FF96, #FFFF96);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	background-size: 400% 400%;
+  	animation: gradient 10s ease infinite;
     position: absolute;
 	top: 0vh;
     text-align: center;
@@ -300,14 +302,14 @@ a {
 
 
 .templerunicons {
-	background-image: url("Media/AppleSymbolRed.svg");
-	background-size: 80% auto;
+	background-image: url("Media/TempleRunSymbol.svg");
+	background-size: 65% auto;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	aspect-ratio: 1/1;
 	width: 7vmin;
 	margin: 1vmin;
-	background-color: white;
+	background-color: #752900;
 	border-radius: 25%;
 }
 
@@ -356,14 +358,14 @@ a {
 }
 
 .nickicons {
-	background-image: url("Media/AppleSymbolRed.svg");
+	background-image: url("Media/NickSymbol.svg");
 	background-size: 80% auto;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	aspect-ratio: 1/1;
 	width: 7vmin;
 	margin: 1vmin;
-	background-color: white;
+	background-color: #7F5845;
 	border-radius: 25%;
 }
 
@@ -374,14 +376,14 @@ a {
 }
 
 .oliviaicons {
-	background-image: url("Media/AppleSymbolRed.svg");
-	background-size: 80% auto;
+	background-image: url("Media/OliviaSymbol.svg");
+	background-size: 50% auto;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	aspect-ratio: 1/1;
 	width: 7vmin;
 	margin: 1vmin;
-	background-color: white;
+	background-color: #FEFFE0;
 	border-radius: 25%;
 }
 
@@ -437,5 +439,17 @@ a {
   left: 0px;
   pointer-events: none;
   z-index: 99999999;;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 

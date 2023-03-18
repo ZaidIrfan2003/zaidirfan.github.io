@@ -118,6 +118,8 @@ body {
   	animation: gradient 10s ease infinite;
 }
 
+/* Fruit Ninja Buttons */
+
 .trailerframe {
 	width: 45vmin;
 	aspect-ratio: 1/1;
@@ -191,11 +193,6 @@ body {
 		transform: rotate(-360deg)
 	}
 }
-
-
-/* Fruit Ninja Buttons */
-
-
 
 /* Navigation Container */
 
